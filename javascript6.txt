@@ -1,0 +1,593 @@
+AULAS PASSADAS
+
+-------------- Sites -------------------
+
+FUNCTION >> https://www.w3schools.com/js/js_functions.asp
+
+  
+-------------EXPLICAÇÃO--------------------
+
+FUNCTION == Ao invés de você colocar a mesma conta inúmeras vezes no código, se usa o function; Um exemplo simples que eu vou dar,
+  vai ser usando a conta para ver a metade de algo
+function metade(a, b){
+  return (a + b)/2 // Ao invés de sempre que eu querer ver a metade de algo eu escrever a merda da conta inteira, é só fazer isso metade(2, 31)
+}
+
+
+------------Exercícios--------------
+
+
+
+FUNCTION == Ao invés de você colocar a mesma conta inúmeras vezes no código, se usa o function; Um exemplo simples que eu vou dar,
+  vai ser usando a conta para ver a metade de algo
+function metade(a, b){
+  return (a + b)/2 // Ao invés de sempre que eu querer ver a metade de algo eu escrever a merda da conta inteira, é só fazer isso metade(2, 31)
+}
+
+
+------------Exercícios--------------
+
+	Escreva um programa que leia dois números e apresente um menu de opções como o mostrado abaixo:
+Escolha a opção: // Dica, dá para fazer por ELSE IF =P
+	A- Soma de 2 números. 
+  B- Diferença entre 2 números (maior pelo menor). 
+  C- Produto entre 2 números. 
+  D- Divisão entre 2 números (o denominador não pode ser zero).
+  	
+Leia a opção do usuário e execute a operação com os dois números lidos anteriormente.
+Caso a opção digitada seja inválida, apresente a mensagem de “Opção inválida” para o usuário.
+Lembre-se de usar funções para organizar seu programa.
+
+SOLUÇÃO DO EXERCÍCIO USANDO “ELSE IF”
+
+var opção= prompt("Digite a opção:\n A- Soma de 2 números. \nB- Diferença entre 2 números (maior pelo menor). \nC- Produto entre 2 números. \nD- Divisão entre 2 números (o denominador não pode ser zero)");
+
+if(opcao == "A"){
+  alert("soma");
+} else if(opcao == "B"){
+  alert("Subtração");
+}else if(opcao == "C"){
+  alert("multiplicação");
+}else if(opcao == "D"){
+  alert("Divisão");
+}else{
+  alert("opção inválida");
+}
+obs: esse método é interessante quando a poucas opções.
+
+
+
+
+SOLUÇÃO DO EXERCÍCIO USANDO “FUNCTION”+"ELSE IF"+"SWITCH"
+
+function soma(a,b){
+  return a+b
+}
+
+function sub(a,b){
+  if(a>b){
+    alert(a-b)
+  }
+ else{
+   alert(b-a)
+ }
+}
+
+function div(a,b){
+  if(a>0 && b>0){
+    alert(a/b)
+  }
+  else{
+    alert("não pode dividir")
+  }
+}
+
+function multi(a,b){
+  return(a*b)
+}
+
+var condicao= prompt ("Você quer calcular?")                       
+while (condicao == ("sim" || "Sim")){
+var entradaDoUsuario = prompt("Escolha a operação").toUpperCase()
+
+var a = Number(prompt("1 num"))
+var b = Number(prompt("2 num"))
+
+switch(entradaDoUsuario){
+    
+    case "SOMAR":
+      alert(sum(a,b));
+      break;
+    case "SUBTRAIR":
+      alert(sub(a,b));
+      break;
+    case "DIVIDIR":
+      alert(div(a,b));
+      break;
+    case "MULTIPLICAR":
+      alert(multi(a,b));
+      break;
+  default:
+    alert("Opção invalida");
+}
+var condicao = prompt("Você quer continuar calculando?") 
+}
+
+explicação do Matheus termina aqui/* Agenda de hoje:
+ * 	Functions e exercicio(s)
+ * Antes do intervalo:
+ * Depois do intervalo:
+ * 	Intro ao DOM e exercicio(s)							 
+ * 
+ * //funcoes ou functions
+ */
+
+
+------------------------------------------------------
+
+
+
+
+
+https://docs.google.com/document/d/1lYSwArvrb5ucg63hRaUk3iqSypd_pSQzx4O5SWdxCdo/edit   -
+
+anotações da Bia
+
+
+
+Exercícios Javascript
+
+-Exercício 1
+    Faça um programa que leia 2 números, some-os e exiba uma mensagem com o resultado apenas se o
+    resultado for maior que 100.
+
+-Exercício 2
+    Escreva um programa que calcule e mostre a tabuada (numero * 1, numero * 2, ..., até numero * 10)
+    de um número qualquer, digitado pelo usuário.
+
+-Exercício 3 DESAFIO
+    Defina um Array numérico desordenado de 10 posições. Depois, ordene o Array  em ordem crescente e
+    apresente os elementos ordenados. Utilizar um dos algoritmos de ordenação apresentado nos projetos.
+
+-Exercício 4
+    Uma eleição possui 2 candidatos a prefeito: o candidato José, do Partido da Felicidade e o
+    candidato João, do Partido da Esperança. Os eleitores votam nos candidatos pelo número do
+    partido. Para votar no candidato José do Partido da Felicidade, precisam digitar o número 1.
+    Para votar no candidato João, do Partido da Esperança, precisam digitar o número 2.
+    Faça um programa que simule uma urna eletrônica. Para cada eleitor, deve ser lido o número do
+    seu título e em seguida o eleitor poderá digitar o seu voto. A eleição é encerrada quando um
+    valor negativo (menor do que 0) para o título do eleitor é digitado. Informe quantos votos cada
+    candidato teve e qual deles ganhou a eleição.
+    DICA: Pode usar 'do..while' para repetir a votação até que o número digitado seja menor que 0.
+
+-Exercício 5 
+    Faça um programa que peça ao usuário uma temperatura em Fahrenheit, converta-a para
+    graus Celsius e escreva o novo valor na tela. A fórmula de conversão de Fahrenheit (F) para
+    Celsius é C = ( ( F - 32 ) * 5 ) / 9. Exemplo: 100 Fahrenheit = 37,77 Celsius.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------EXPLICAÇÃO--------------------
+DO-WHILE == O laço Do-While serve para executar um comando enquanto a condição não é cumprida
+A diferença entre o laço   WHILE e o laço DO-WHILE é que no laço DO - WHILE ele vai executar o código pelo
+menos uma vez para depois ver se a condição está certa
+while( condição ){ código }
+Ele só vai executar o código enquanto a condição não é cumprida
+do{ código }while(condição) 
+Ele executa o código pelomenos uma vez para depois ver a condição
+------------------------------------------
+Para quem nao lembra, a DIFERENÇA ENTRE VAR, LET E CONST
+VAR = Quando voce define um espaço de memoria com var, voce pode mexer nela de qualquer parte do codigo, ela é global
+LET = Só é visível dentro do escopo, é local
+CONST = É quando você atribui um valor a uma variável e ela não pode ser mais alterada, Tambem é global                                                                                                 
+----------------CÓDIGO---------------------
+let palpite; 
+
+
+const palpite_correto = 5;
+/*do{
+  palpite = parseInt(prompt("Adivinhe um numero de 1 a 10"));
+  if(palpite != palpite_correto){
+    alert("Errou! Tente novamente");
+  }
+}while(palpite != palpite_correto);
+alert("Palpite correto");
+while(palpite != palpite_correto){
+  let palpite = parseInt(prompt("Advinhe um número de 1 a 10"));
+  if(palpite != palpite_correto){
+    alert("Errou! Tente novamente");
+  }
+}
+alert("Palpite correto");
+
+var divs = [div1, div2, div3, div4]
+divs[0].innerHTML = "<img src=home/egauch/Images/img.png" style="width: 10vw;"
+*/
+while(true)= quando for verdadeiro para de rodar;
+Para que o número cresça e rode diferente de i++.
+utiliza-se por exemplo: i+=5, assim vai rodar de 5 em 5.
+meuarray.length= para rodar a lista enquanto houver dados;
+LAÇO FOR
+for(<statment1>,<statment2>:<statment2>,<statment3>){codigo a ser executado}
+var meuarray = ["a","b","c","d","e","f","g","h","i","j
+for(var i=0; i<meuarray.lenght; i+=2){
+alert (meuarray[i]);
+}
+var gordices = {
+	"churros":["doce de leite", "chocolate", "brigadeiro", "pacoca", "nutella", "beijinho", "goiabada"]
+	"sorvete":["morango", "manga", "creme", "flocos", "napolitano", "pudim", "milho"]
+  "mousse": ["maracuja", "limao", "chocolate", "morango", "pessego", "ameixa", "uva"]
+};               
+for(x in gordices){
+for(var i = 0; i<gordices[x]).length; i
+                }
+console.log(gordices);              
+for(var x = <primeira chave do objeto>; enquanto x for menor que numero de chaves no objeto; x passa para proxima chave){
+	alert(x);
+  }
+gordices.{ gordices["mousse"]     
+        "churros":[...]
+        "mousse" :[...]
+      }
+  	for(x in gordices){
+        for(i in gordices[x])[
+          console.log("Sabor de " +x + ": " +gordices[x][i])
+        ]
+        for(var i=0 =i<gordices[x].lenght;i++)
+          console.log(gordices[x][i]);
+        x="churros"
+;      }
+      	x="mousse"
+			alert["churros"]
+meuarray.[
+      0:"a",
+      1:"b",
+      2:"c",
+      3:"d",
+for (x in gordices){
+  for (i in gordices[x][i] == "chocolate"){
+    alert(x + "11 +"x, video leng	
+         alert(x+ " x+ gradients [1]"))
+  }
+ //      x= chaves - rodará enquanto houver chaves;
+// Minha oficina
+  /* DTroca de oleo
+	-Troca de pastilhas do freio
+  -Alinhamento
+  -Troca de pneu
+  -Martelinho de ouro
+  */
+	var minhaOficina={
+    "nome":"Oficina do Eric",
+    "telefone":40028922,
+  	"endereco":"Av.Paulista, uarever",
+    "mecanicos":["Matheus","Luana","Tati","Renan","Yudi"]
+    "servicos" : ["Troca de Oleo", "Troca de Roda"]
+    "promocao": "A cada 10 trocas de oleo ganha um PREIXTEISHOM" //bom dia boa tarde boa noite
+  }
+   var servicos = "";
+    for(i in minhaOficina["servicos"]){
+    if(i == 0)
+    servicos += minhaOficina["servicos"][i];
+    else{
+    	servicos = servicos + ", " + minhOficina["servicos"][i];
+  }
+    alert("Bem Vindos a "+minhaOficina["nome"]+"\n\nA promocao do mes e: "+minhaOficina["promocao"]+"\nOs nossos servicos sao: "+minhaOficina["servicos"]);
+    var servico_escolhido = prompt("Digite 1 para a troca de oleo ou 2 para troca de roda");
+if(servico_escolhido == 1){
+  //Troca de oleo
+  alert("Trocando o Oleo:");
+  alert("1-Abra o capo");
+  alert("2-Retira a vareta");
+  alert("3-Pesquise no google: Como trocar oleo carro");
+  alert("4-Observar a complexidade e desistir");
+  alert("5-Ligar para um mecânico próximo do carro");
+  alert("6-Apenas pague para ele que é GG");
+}    
+function trocaDeRoda(rodas){
+  for(var i=0; i<rodas; i++)
+  var proc= '
+  -verificar freio de mao e se ta engatado
+  -Afrouxe os parafusos
+  -erga o carro
+  -Solte os parafusos da roda
+  -tire a roda
+  -coloque a nova roda
+  -aperte elvemente os parafusos
+  -desca o carro
+  -Aperte os parafusos';
+  alert(proc);
+  alert("Servico Realizado");
+	}
+      let opc = prompt(" Deseja rodar tudo denovo?? ").toUpperCase();
+}while(opc == "sim" || opc == "si" || opc == "s")
+  https://www.google.com.br/search?q=como+trocar+o+oleo+do+carro&oq=como+trocar+o+oleo+do+carro&aqs=chrome..69i57.4669j0j1&sourceid=chrome&ie=UTF-8
+ //      i= lista - rodará enquanto houver itens na lista;
+// só irá para a outra chave após rodar todos os itens da lista;;
+  
+  
+  
+--------------------------INSIRA O CÓDIGO AQUI--------------------------------
+        
+//Minha oficina
+/*
+Servicos da oficina:
+-Troca de oleo
+  -Abra o capo
+  -Retire a vareta
+  -Localize o plug na bandeja de oleo
+  -Coloque uma bandeja de captura por baixo
+    -Cuidado
+  -Abra o bujao
+    -Cuidado
+  -Espere todo o oleo sair
+  -Feche o bujao
+    -Troque o filtro
+  -Coloque o oleo novo
+  -Verifique a vareta
+  -Feche o capo
+-Troca de pastilhas do freio
+-Alinhamento
+-Troca de roda
+    -Verificar freio de mao e se esta engatado
+  -Afrouxe os parafusos
+  -Pegue o macaco
+  -Erga o carro
+  -Solte os parafusos da roda
+  -Tire a roda
+  -Coloque a nova roda
+  -Aperte levemente os parafusos
+  -Desca o carro
+  -Aperte os parafusos
+-Martelinho de ouro
+*/
+
+var minhaOficina = {
+  "nome": "Oficina do Yudi",
+  "telefone": "40028922",
+  "endereco": "Av. Paulista, uarever",
+  "mecanicos": ["Matheus", "Luana", "Tati", "Renan", "Yudi"],
+  "servicos": ["Troca de Oleo", "Troca de Roda"],
+  "promocao": "A cada 10 trocas de oleo ganhe um pleisteixo"
+}
+
+var servicos = "";
+
+function trocaDeOleo(){
+  var proc = `Troca de oleo
+    -Abra o capo
+    -Retire a vareta
+    -Localize o plug na bandeja de oleo
+    -Coloque uma bandeja de captura por baixo
+      -Cuidado
+    -Abra o bujao
+      -Cuidado
+    -Espere todo o oleo sair
+    -Feche o bujao
+      -Troque o filtro
+    -Coloque o oleo novo
+    -Verifique a vareta
+    -Feche o capo`;
+    alert(proc);
+    alert("Servico realizado");
+}
+
+function trocaDeRoda(rodas){
+  if(rodas > 0){
+    for(var i=0; i<rodas; i++){
+      var proc = `
+          -Verificar freio de mao e se esta engatado
+        -Afrouxe os parafusos
+        -Pegue o macaco
+        -Erga o carro
+        -Solte os parafusos da roda
+        -Tire a roda
+        -Coloque a nova roda
+        -Aperte levemente os parafusos
+        -Desca o carro
+        -Aperte os parafusos`;
+        alert(proc);
+    }
+    return "Servico realizado";
+  }
+  else{
+    return "Servico nao realizado";
+  }
+}
+
+for(i in minhaOficina["servicos"]){
+  if(i == 0){
+    servicos += minhaOficina["servicos"][i];
+  }
+  else{
+    servicos = servicos + ", " + minhaOficina["servicos"][i];
+  }
+}
+
+alert("Bem vindos a "+minhaOficina["nome"]+"\n\nA promocao do mes e: "+minhaOficina["promocao"]+"\nOs nossos servicos sao: "+servicos+".");
+
+var servico_escolhido;
+
+do{
+  servico_escolhido = parseInt(prompt("Digite 1 para a troca de oleo, 2 para troca de roda ou 0 para finalizar"));
+
+  if(servico_escolhido == 1){
+    trocaDeOleo();
+  }
+  else if(servico_escolhido == 2){
+    var nrodas = parseInt(prompt("Quantas rodas deseja trocar?"))
+    trocaDeRoda(nrodas);
+  }
+  
+  /*COM SWITCH:
+   switch(servico_escolhido){
+    case 1:
+      trocaDeOleo();
+      break;
+    case 2:
+      var nrodas = parseInt(prompt("Quantas rodas deseja trocar?"))
+      trocaDeRoda(nrodas);
+      break;
+    default:
+      alert("opcao invalida");
+      break;
+    */
+  
+}while(servico_escolhido != 0);
+
+alert("Hora da revisao");
+trocaDeOleo();
+var resultadoDoServico = trocaDeRoda(0);
+alert(resultadoDoServico);
+        
+------------------------------------------------------------------------------   
+
+
+
+
+
+---------------------------------------------------------------------------
+
+  
+  aula Bruno 23.07.2018
+  códigos utilizados no Visual Code Studio
+  
+  
+  
+////JS
+let paragrafo = document.querySelector("p");
+let paragrafos = document.querySelectorAll("p");
+let botao = document.querySelector("button");
+let sonic = document.querySelector("#sonic");
+
+botao.onclick = pintarAzul;
+sonic.onclick = correr;
+
+//onmouseenter
+//onmouseleave
+//onmouseover
+//onkeydown
+//onblur
+
+function pintarAzul(){
+    for(let p of paragrafos){
+        p.style.color = "blue";
+    }
+}
+
+function correr(){
+    sonic.style.transform = "translateX(1000px) scale(0.1)";
+}
+
+//CSS
+
+#sonic{
+    width: 100px;
+    transition: 3s;
+}
+
+x
+///HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div>
+        <p>Cat Ipsum</p>
+        <p>Mussum Ipsum</p>
+        <p>Dog Ipsum</p>
+        <p>Pudim Ipsum</p>
+        <p>Xablau Ipsum</p>
+        
+        <!-- <button onclick="pintarAzul()">Clique me!</button> -->
+        <button>Clique me!</button>
+    </div>
+    
+    
+</body>
+</html>
+      
+      
+-----------------------
+
+
+
+
+Para tocar sons,videos e etc é só usar o comando -- NomedoSom.play();
+defer == Faz o JS rodar no final
+imagens[0].classList.classenohtml('ativa'); ele pega uma classe e adiciona em um elemento do html, como a classe fazia uma animação no css,
+quando ele adicionou, a classe cumpriu sua programação e fez as imagens moverem.
+
+
+Alguem tem duvida com isso?? (Banner)
+
+
+
+
+
+
+-----------------------Código---------------------------
+  
+FORM ------- FORM ------FORM ------- FORM ------FORM ------- FORM ------FORM ------- FORM ------
+
+<form action="/action_page.php">
+  First name:<br>
+  <input type="text" name="firstname" value="Mickey">
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Mouse">
+  <br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+    
+FORM ------- FORM ------FORM ------- FORM ------FORM ------- FORM ------FORM ------- FORM ------
+  
+Não se esqueçam de colocar let somCorrida = new Audio('NomedoAudio.mp3') <<< Lá em cima, para defini-lo
+                                                                             
+dica de site: http://queroserprogramador.com/validando-formularios-com-javascript/                                                                                                                                                       
+                                                                             
+http://github.com/estacaohack5/303-memoria
+
+https://estacaohack5.github.io/303-memoria/
+
+
+materia de JS no link https://codeshare.io/estacaohack6revisao
+EXEMPLO DOM >>> https://github.com/estacaohack6/301-exemplos-dom
+SOM MP3 ABERTURA SONIC >>> http://66.90.93.122/ost/sonic-the-hedgehog-original-soundtrack/pzhpcmhh/01%20Title%20Screen.mp3
+EXERCICIO DE HOJE >>> https://github.com/estacaohack6/402-exemplo-banner
+HTML FORMS >>> https://www.w3schools.com/html/html_forms.asp
+https://github.com/estacaohack6/301-exemplos-dom/blob/master/script.js
+
+                                                                             
+                                                         
+                                                         
+                                                                             
+
+
